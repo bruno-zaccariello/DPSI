@@ -1,6 +1,6 @@
 import requests as r
 
-def getAddress(cep):
+def logradouro(cep):
     if len(cep) != 8:
         return 'CEP Inválido'
     if not cep.isdigit():
@@ -20,8 +20,8 @@ def getAddress(cep):
     except:
         return 'Erro Interno'
 
-print(getAddress('02415002'))
-print(getAddress('00'))
-print(getAddress('00000000000'))
-print(getAddress('a2415002'))
-print(getAddress('00000000'))
+print(logradouro('02415002'))
+print(logradouro('00'))
+print(logradouro('00000000000'))
+print(logradouro('a2415002'))
+print(logradouro('05109030'))
