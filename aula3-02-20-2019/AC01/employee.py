@@ -7,9 +7,11 @@ app = Flask(__name__)
 
 DATABASE = 'employee.sqlite3'
 
-INSERT = "INSERT INTO employee (cpf, cargo) VALUES (?, ?)"
+INSERT = "INSERT INTO employee (cpf, nome, cargo) VALUES (?, ?, ?)"
 
 SELECT = "SELECT * FROM employee"
+
+SELECT_CPF = "SELECT * FROM employee WHERE cpf = ?"
 
 def make_dicts(cursor, row):
     return dict((cursor.description[idx][0], value)
@@ -30,38 +32,36 @@ def close_connection(exception):
 
 def doQuery(query, args=(), one=False):
     cur = get_db().execute(query, args)
+    get_db().commit()
     rv = cur.fetchall()
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
 @app.route('/funcionario/<int:cpf>', methods=['GET'])
 def get_employee(cpf):
-    db = get_db().cursor()
     if len(str(cpf)) != 11:
         return jsonify({'status': 'error', 'errorMessage': 'CPF Inválido'}), 404
-    try:
-        # Database connect
-        employeeData = {
-            'cpf': cpf,
-            'cargo': 'cargo'
-        }
-        return jsonify({'employee': employeeData, 'status': 'success'}), 200
-    except:
-        return jsonify({'status': 'error', 'errorMessage': 'Erro interno'}), 500
+    employee = doQuery(SELECT_CPF, (cpf))
+    print(employee)
+    employeeData = {
+        'employee':employee
+    }
+    return jsonify({'employee': employeeData, 'status': 'success'}), 200
 
 
 @app.route('/funcionario/<int:cpf>', methods=['POST'])
 def post_employee(cpf):
     if len(str(cpf)) != 11:
         return jsonify({'status': 'error', 'errorMessage': 'CPF Inválido'}), 404
-    cargo = "buceta"
-    q = doQuery(SELECT)
-    print(q)
     data = r.get_json()
 
     cargo = data.get('cargo', None)
+    nome = data.get('nome', None)
     if not cargo:
         return jsonify({'status': 'error', 'errorMessage': 'Favor informar o cargo no corpo da requisição'}), 400
+    elif not nome:
+        return jsonify({'status': 'error', 'errorMessage': 'Favor informar o nome no corpo da requisição'}), 400
+    q = doQuery(INSERT, (cpf, nome, cargo))
     return jsonify({'status': 'success', 'data': data}), 200
 
 
