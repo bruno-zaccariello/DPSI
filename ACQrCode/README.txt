@@ -1,3 +1,5 @@
+Para utilzar o módulo, favor instalar as dependencias no requirements.txt
+
 Nesse módulo você irá usar basicamente o manager.py, ele automatiza as tarefas de gerar QRCodes.
 
 Atualmente temos 4 funções:
