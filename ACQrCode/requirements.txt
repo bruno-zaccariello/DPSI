@@ -1,0 +1,4 @@
+PyQRCode==1.2.1
+pypng==0.0.19
+Pillow==5.4.1
+pyzbar==0.1.8

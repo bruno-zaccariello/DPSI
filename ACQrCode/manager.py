@@ -1,12 +1,21 @@
-from qrmaker import QrController as Qr
+from qrmaker import QrController
+from qreader import QReader
 
-def newQrPNG(data: str, file_name: str = ""):
-    QR = Qr()
-    qrObject = QR.buildQr(data).saveAsPNG(file_name)
+class QRManager():
+    QControl = QrController()
+    QRead = QReader()
 
-def newQrSVG(data: str, file_name: str = ""):
-    QR = Qr()
-    qrObject = QR.buildQr(data).saveAsSVG(file_name)
+    def newQrPNG(self, data: str, file_name: str = ""):
+        qrObject = self.QControl.buildQr(data).saveAsPNG(file_name)
+        return self
 
-newQrPNG('love of my life')
-newQrSVG('https://google.com.br')
+    def newQrSVG(self, data: str, file_name: str = ""):
+        qrObject = self.QControl.buildQr(data).saveAsSVG(file_name)
+        return self
+
+    def decodeQr(self, path):
+        data = self.QRead.readAndDecodeQr(path)
+        return data
+
+    def jsonifyQr(self, path):
+        return self.QRead.jsonifyQr(path)
