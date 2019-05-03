@@ -1,0 +1,118 @@
+form {
+    border: 1px solid transparent;
+    padding: 5px;
+}
+
+form * {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 1px dashed lightgray;
+    margin: 15px auto;
+    padding: 10px;
+}
+
+form legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+label {
+    font-size: 1.1rem;
+    display: block;
+    margin: 0;
+    padding: 0 5px;
+}
+
+input,
+select {
+    background-color: white;
+    border: 1px solid #9b9b9b;
+    line-height: inherit;
+    margin: 0 0 15px 0;
+    padding: 5px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    margin: 5px;
+}
+
+input:hover,
+select:hover,
+input:focus,
+select:focus {
+    border-color: black;
+}
+
+form.search-form fieldset {
+    border: 1px dashed lightgray;
+    margin: 15px auto;
+    padding: 10px;
+}
+
+form.search-form legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: auto;
+}
+
+form.search-form label {
+    font-size: .9rem;
+    display: block;
+    margin: 0;
+    padding: 0 5px;
+    width: 30%;
+}
+
+form.search-form input,
+form.search-form select {
+    background-color: white;
+    border: 1px solid #9b9b9b;
+    font-size: .9rem;
+    line-height: inherit;
+    margin: 0 0 0 0;
+    height: 25px;
+    padding: 5px;
+    min-width: 50px;
+    max-width: 250px;
+    width: 70%;
+}
+
+form.search-form input[type=radio],
+form.search-form input[type=checkbox] {
+    margin: 5px;
+}
+
+form.search-form input:hover,
+form.search-form select:hover,
+form.search-form input:focus,
+form.search-form select:focus {
+    border-color: black;
+}
+
+form.search-form .advanced-options {
+    color: #9b9be6;
+    font-size: .8em;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: -10px;
+    text-align: right;
+    width: 100%;
+}
+
+form.search-form .search-vitrine {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1000px) {
+    form.search-form .search-vitrine {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+    }
+}

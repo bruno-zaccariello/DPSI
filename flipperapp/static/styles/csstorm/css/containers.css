@@ -1,0 +1,38 @@
+.container {
+    margin: auto;
+    width: 90%;
+}
+
+.full-container {
+    margin: auto;
+    width: 100%;
+}
+
+.overlay-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    margin: auto;
+    height: 400px;
+    width: 600px;
+    z-index: 5;
+}
+
+.overlay-container-full {
+    background-color: rgb(255, 255, 255);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 100vw; 
+    z-index: 4;
+}
+
+section.page-content {
+    padding-bottom: 50px;
+}

@@ -1,0 +1,54 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    padding: 0;
+    width: 100%;
+}
+
+table.hv tr:hover td:not(.options) {
+    background-color: rgb(255, 251, 0);
+}
+
+table.full_border td, 
+table.full_border th {
+    border: 1px solid black;
+}
+
+table.Ln_border tr {
+    border: 1px solid black;
+}
+
+table.col_border td,
+table.col_border th {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+caption {
+    caption-side: bottom;
+    color: rgb(100,100,100);
+    font-size: .9em;
+    padding: 0;
+    margin: 5px 0 0;
+    text-align: center;
+    
+    width: 100%;
+}
+
+thead th {
+    background-color: rgb(45, 153, 224);
+}
+
+tr {
+    height: 45px;
+    width: 100%;
+}
+
+td, th {
+    padding: 10px;
+}
+
+table td.options, table th.options {
+    width: 40px;
+}

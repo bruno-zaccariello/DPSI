@@ -1,0 +1,93 @@
+.dialog-bg {
+    background-color: rgba(0,0,0,.2);
+    height: 100%;
+    width: 100%;
+}
+
+.dialog {
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    min-width: 400px;
+    max-width: 500px;
+    width: 50%;
+}
+
+.dialog-content {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+
+    padding: 24px;
+
+    height: 100%;
+    width: 100%;
+}
+
+.dialog-warning {
+    border-color: rgb(255, 220, 0);
+}
+
+.dialog-success {
+    border-color: #26ac45;
+}
+
+.dialog-body {
+   margin: 20px auto; 
+}
+
+.big-dialog {
+    .dialog;
+    height: 250px;
+}
+
+.cdk-overlay-container {
+    position: fixed;
+    z-index: 1000;
+}
+
+.cdk-global-overlay-wrapper {
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+}
+
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.cdk-overlay-backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    transition: opacity .4s cubic-bezier(.25,.8,.25,1);
+    opacity: 0;
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+    opacity: 1;
+}
+
+.mat-dialog-container {
+    margin: auto;
+}
+
+.mat-dialog-container {
+    display: block;
+    box-sizing: border-box;
+    overflow: auto;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    max-height: inherit;
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import './css/universal.css';
+@import './css/ui.css';
+@import './css/buttons.css';
+@import './css/table.css';
+@import './css/forms.css';
+@import './css/header.css';
+@import './css/containers.css';
+@import './css/carousel.css';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(33, 7, 36);
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 17px;
+}
+
+a {
+    color: blue;
+    cursor: pointer;
+}
+
+a:visited {
+    color: rgb(30, 147, 160);
+}
+
+a:hover {
+    color: lightskyblue;
+}
+
+a:active {
+    color: rgb(107, 160, 194);
+}
+
+a:not([href]) {
+    color: red;
+}
+
+address {
+    font-style: normal;
+    line-height: inherit;
+}

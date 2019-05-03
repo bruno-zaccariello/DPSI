@@ -1,0 +1,149 @@
+/* Sliders e UIs de Fato */
+
+.stm-slider {
+    background-color: lightgray;
+    height: 25px;
+    width: 200px;
+}
+
+/* Classes de tamanhos e espaçamentos */
+
+.md-spacing {
+    height: 20px;
+    width: 100%;
+}
+
+.xl-spacing {
+    height: 40px;
+    width: 100%;
+}
+
+.throw-bottom {
+    margin-top: auto;
+}
+
+.throw-left {
+    margin-right: auto;
+}
+
+.throw-right {
+    margin-left: auto;
+}
+
+/* Classes de Display */
+
+.flex-row-nw {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-row-wp {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-col-nw {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex-col-w {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Classes p/ posição de texto */
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.evenly {
+    justify-content: space-evenly;
+}
+
+.around {
+    justify-content: space-around;
+}
+
+.center {
+    justify-content: center;
+}
+
+.auto-margin {
+    margin: auto
+}
+
+.shy {
+    margin: 5px;
+}
+
+.very-shy {
+    margin: 10px;
+}
+
+/* Classes p/ tamanho de fonte */
+
+.ssm-txt {
+    font-size: .5rem;
+}
+
+.sm-txt {
+    font-size: .8rem;
+}
+
+.md-txt {
+    font-size: 1rem;
+}
+
+.xl-txt {
+    font-size: 1.2rem;
+}
+
+.xxl-txt {
+    font-size: 1.5rem;
+}
+
+.click {
+    cursor: pointer;
+}
+
+.v-align {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.full-width {
+    width: 100%
+}
+
+.half-width {
+    width: 50%;
+}
+
+.v-bottom {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+}
+
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
