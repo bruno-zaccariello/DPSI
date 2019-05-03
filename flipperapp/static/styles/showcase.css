@@ -1,0 +1,100 @@
+.showcase-container {
+    color: white;
+    padding: 20px;
+    padding-bottom: 50px;
+    margin: 25px auto;
+
+    max-width: 1000px;
+    width: 90%;
+}
+
+.showcase {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    row-gap: 15px;
+
+    margin: 10px auto;
+
+    width: 100%;
+}
+
+.item-card {
+    display: grid;
+    grid-template-areas: 
+    "image"
+    "image"
+    "image"
+    "price"
+    "buy"
+    ;
+    grid-template-rows: 60px 60px 70px 50px 60px; 
+    
+    background-color: #664367;
+    border: 2px solid rgb(218, 7, 130);
+    border-radius: 5px;
+    box-shadow: 0 0 15px -5px rgb(255, 0, 212);
+
+    margin: auto;
+    
+    height: 300px;
+    width: 200px;
+}
+
+.card-image-container {
+    position: relative;
+    grid-area: image;
+    
+    text-align: center;
+    margin: auto;
+
+    height: 100%;
+    width: 100%;
+}
+
+.card-image {
+    text-align: center;
+    margin: 40px auto auto;
+
+    height: 100%;
+    width: 100%;
+
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.card-image-descriptor {
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 100%;
+    z-index: 1;
+}
+
+.card-price {
+    grid-area: price;
+    
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 70px;
+}
+
+button.buy-button {
+    border: none;
+    background-color: rgb(218, 7, 130);
+    border-radius: 0;
+
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    margin: 4px auto 12px;
+    height: 44px;
+    width: 100%;
+
+    transition: .4s;
+}

@@ -199,3 +199,8 @@
   border: 2px solid #e04269;
   margin-left: -2px;
 }
+
+.slider-container .slider-left:hover,
+.slider-container .slider-right:hover {
+  border: 2px solid #d42626;
+}
